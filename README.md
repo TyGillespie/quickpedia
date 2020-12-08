@@ -1,2 +1,3 @@
 # quickpedia
- A Wikipedia CLI tool.
+
+A Wikipedia CLI tool.
