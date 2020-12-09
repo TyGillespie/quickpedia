@@ -8,14 +8,16 @@ MIT License.
 import wikipedia
 
 import sys
+import argparse
 
 
 if __name__ == "__main__":
-    # Todo: Make this except a commandline parem, not an input.
-    print("Enter what to search.")
-    to_search = input()
+    parser = argparse.ArgumentParser(description="Tool to look up things on Wikipedia.")
+    parser.add_argument("search", help="What to search.")
+    args = parser.parse_args()
+    to_search = args.search
     if to_search == "":
-        print("Nothing was typed.")
+        print("A queery wasn't provided.")
         sys.exit()
     else:
         res = wikipedia.summary(to_search)
