@@ -6,6 +6,8 @@ A Wikipedia CLI tool.
 
 Currently lets you search for a topic, and summarizes the closest result.
 
+Also lets you write to a file, instead of print to the terminal.
+
 ## Todo
 
 * Make you be able to choose between closest result, or list of results.
