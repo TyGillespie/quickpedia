@@ -29,11 +29,15 @@ if __name__ == "__main__":
         print("A queery wasn't provided.")
         sys.exit()
     else:
-        res: str = wikipedia.summary(to_search)
-        if args.file:
-            f = open(to_search + ".txt", "w")
-            f.write(res)
-            f.close()
-        else:
-            print(res)
-        sys.exit()
+        try:
+            res: str = wikipedia.summary(to_search)
+            if args.file:
+                f = open(to_search + ".txt", "w")
+                f.write(res)
+                f.close()
+            else:
+                print(res)
+        except wikipedia.exceptions.DisambiguationError:
+            print("Too many possible results. Try being more spacific.")
+        finally:
+            sys.exit()
