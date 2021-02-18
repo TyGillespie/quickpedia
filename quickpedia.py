@@ -1,7 +1,7 @@
 """Quickpedia
 Simple CLI tool to look up something on Wikipedia.
 
-Copyright (C) 2020, Ty Gillespie. All rights reserved.
+Copyright (C) 2020-2021, Ty Gillespie. All rights reserved.
 MIT License.
 """
 
@@ -14,7 +14,7 @@ from typing import List
 
 if __name__ == "__main__":
     parser: argparse.ArgumentParser = argparse.ArgumentParser(
-        description="Tool to look up things on Wikipedia."
+        description="CLI tool to look up things on Wikipedia."
     )
     parser.add_argument("search", help="What to search.")
     parser.add_argument(
