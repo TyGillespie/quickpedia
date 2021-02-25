@@ -9,7 +9,7 @@ import wikipedia
 
 import sys
 import argparse
-from typing import List
+from typing import Any
 
 
 if __name__ == "__main__":
@@ -23,7 +23,7 @@ if __name__ == "__main__":
         action="store_true",
         help="Write the output to a file, not the terminal.",
     )
-    args: List[str] = parser.parse_args()
+    args: Any = parser.parse_args()
     to_search: str = args.search
     if to_search == "":
         print("A queery wasn't provided.")
